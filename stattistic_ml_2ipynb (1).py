@@ -25,7 +25,6 @@ df = df[['alcohol', 'magnesium', 'target']]
 df = df[df.target != 0]
 train_df, val_df = train_test_split(df, test_size=30, random_state=3)
 
-"""Question 1 section 1"""
 
 labels = train_df['target'].unique().tolist()
 colors = ['r','b']
@@ -113,36 +112,7 @@ for c in (C):
 
   plt.show()
 
-"""Question 1 section 3
-\*
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-"""
-
-
-
-"""**question 1 section 4**
-
-"""
 
 margin = []
 C = np.arange(0.01, 4, 0.5)
@@ -166,7 +136,7 @@ Small C means the margin is more important i.e, Margin = 1/||w|| , small c will 
 
 argminₔ (||w|| + C⋅∑max(0,1-yᵢ ⟨w,xᵢ⟩), if C is big than ||w|| does not affect much on the answear and the model will try to minimize the following expression ∑max(0,1-yᵢ ⟨w,xᵢ⟩) ,the model will try to fit each point correctly, i.e we can get overfitting .if C is small than the margin effects more on the expression above.
 
-**Question 1 section 5**
+
 """
 
 error_train = []
@@ -188,12 +158,6 @@ plt.legend()
 plt.show()
 
 
-
-"""As we have seen in section 4 increasing C may cause overfitting i.e small error rate on the train set but poor results on val set.
-As C increase we can see that the error on the test set is big on the other hand the train set error is extremely small(0).We can notice that from specific C val there are no changes in validation set errors.
-
-**Question 1 section 6**
-"""
 
 error_train1 = []
 error_val1= []
