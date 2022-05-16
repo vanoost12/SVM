@@ -38,6 +38,11 @@ def plot_wine_scatter_plot_train(train_df):
   plt.legend()
   plt.grid(True)
 
+"""stattistic_ML_2ipynb
+Plot the data
+"""
+
+
 def plot_wine_scatter_plot_val(val_df):
   for label, color in zip(labels, colors):
       plot_data = val_df[val_df['target'] == label]
@@ -55,8 +60,6 @@ plot_wine_scatter_plot_val(val_df)
 
 
 """# As we can see the data is not linear separatable.Hard svm takes as assumption that the data is linear separatable, if the data is not linear separatable it wont converge and will not stop.
-
-**Question 1 section 2**
 """
 
 from sklearn.svm import SVC
@@ -179,7 +182,7 @@ plt.show()
 
 
 
-"""As we can see from this graph and the graph in section 5,the validation error rate of the soft-SVM using polynomyal kernel is smaller than with linear kernel.
+"""As we can see from this graph and the graph before,the validation error rate of the soft-SVM using polynomyal kernel is smaller than with linear kernel.
 The representation of the data in a higher space wont necessarily help to increase the accuracy on the validation set, if the data is linear separable the error rate on the validation set will be 0.(complex kernel wont decrese the error rate in this case)
 In addidtion using complex kernels can cause overfitting i.e, accuracy  of the validation set wont increase.
 Moreover when deg > 5 there is no change in validation error rate,i.e higher degree wont necessarily help to increase the accuracy on the validation set.
@@ -187,7 +190,7 @@ Moreover when deg > 5 there is no change in validation error rate,i.e higher deg
 
 
 
-"""**Question 1 section 7**"""
+"""**Check fit for deg**"""
 
 #Will choose deg = 2 and deg = 8
 deg_list2 = [2,8]
